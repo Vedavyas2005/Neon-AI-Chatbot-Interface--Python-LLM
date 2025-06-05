@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot – Neon Interface</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="particle-container"></div>
+  
+  <div class="chat-container">
+    <header class="chat-header">
+      <h1>AI Chatbot – Neon Interface</h1>
+      <div class="chat-controls">
+        <select id="personality-select" class="personality-select">
+          <option value="default">Default Assistant</option>
+          <option value="villain">Villain AI</option>
+          <option value="motivator">Motivational Speaker</option>
+          <option value="scientist">Scientific Mind</option>
+        </select>
+        <label class="tts-toggle">
+          <input type="checkbox" id="tts-toggle">
+          <span>TTS</span>
+        </label>
+      </div>
+    </header>
+    
+    <div class="chat-messages" id="chat-messages">
+      <div class="message ai-message">
+        <div class="message-content">
+          <p>Hello! I'm your AI assistant. You can chat with me, ask me to generate images, or toggle text-to-speech. How can I help you today?</p>
+        </div>
+        <div class="message-timestamp">
+          <span>Now</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="typing-indicator hidden" id="typing-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <div class="chat-input-container">
+      <div class="mode-toggle">
+        <button id="chat-mode" class="mode-button active">Chat</button>
+        <button id="image-mode" class="mode-button">Image</button>
+      </div>
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Type your message here..." autocomplete="off">
+        <button id="send-button">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="send-icon">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/particles.js"></script>
+  <script src="js/animation.js"></script>
+  <script src="js/chatService.js"></script>
+  <script src="js/messageHandler.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
