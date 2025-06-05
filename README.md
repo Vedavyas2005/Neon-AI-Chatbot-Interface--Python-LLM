@@ -10,3 +10,5 @@ An elegant, futuristic AI chatbot built using a custom Python LLM backend (FastA
 🌐 Bridge: REST API (fetch calls)
 
 🧪 Dev Tools: Uvicorn, Ngrok (for secure public tunneling)
+
+Link: https://rad-fudge-39000c.netlify.app/
